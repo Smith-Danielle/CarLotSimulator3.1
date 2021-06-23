@@ -34,6 +34,10 @@ namespace CarLotSimulator3._1
             oldCar.IsDriveable = false;
 
             theDealership.CarList.Add(oldCar);
+            Console.WriteLine("----------------------------------------------------------");
+            Console.WriteLine($"{oldCar.Make} {oldCar.Model} has just been added to the car lot.");
+            Console.WriteLine($"We currently have {CarLot.numberOfCars} car on the lot.");
+            Console.WriteLine("----------------------------------------------------------");
 
             //Object Initialization
             Car newCar = new Car()
@@ -47,16 +51,28 @@ namespace CarLotSimulator3._1
             };
 
             theDealership.CarList.Add(newCar);
+            Console.WriteLine("----------------------------------------------------------");
+            Console.WriteLine($"{newCar.Make} {newCar.Model} has just been added to the car lot.");
+            Console.WriteLine($"We currently have {CarLot.numberOfCars} cars on the lot.");
+            Console.WriteLine("----------------------------------------------------------");
 
             //Object Initializer Syntax
             Car usedCar = new Car() { Year = 2015, Make = "Mazda", Model = "Miata", EngineNoise = "Vroom", HonkNoise = "Bing", IsDriveable = true };
 
             theDealership.CarList.Add(usedCar);
+            Console.WriteLine("----------------------------------------------------------");
+            Console.WriteLine($"{usedCar.Make} {usedCar.Model} has just been added to the car lot.");
+            Console.WriteLine($"We currently have {CarLot.numberOfCars} cars on the lot.");
+            Console.WriteLine("----------------------------------------------------------");
 
             //Constructor
             Car myCar = new Car(2018, "Subaru", "BRZ", "Zoom", "Ding", true);
 
             theDealership.CarList.Add(myCar);
+            Console.WriteLine("----------------------------------------------------------");
+            Console.WriteLine($"{myCar.Make} {myCar.Model} has just been added to the car lot.");
+            Console.WriteLine($"We currently have {CarLot.numberOfCars} cars on the lot.");
+            Console.WriteLine("----------------------------------------------------------");
 
             //Call each of the methods for each car - Complete
 
@@ -105,7 +121,7 @@ namespace CarLotSimulator3._1
             //At the end iterate through the list printing each of car's Year, Make, and Model to the console - Complete
 
             Console.WriteLine("----------------------------------------------------------");
-            Console.WriteLine("Here are some specs for each car on the lot.");
+            Console.WriteLine($"Here are some specs for all {CarLot.numberOfCars} cars on the lot.");
             Console.WriteLine("----------------------------------------------------------");
             foreach (var types in theDealership.CarList)
             {

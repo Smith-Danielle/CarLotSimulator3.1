@@ -6,6 +6,7 @@ namespace CarLotSimulator3._1
     {
         public Car()
         {
+            CarLot.numberOfCars++;
         }
         //Constructor to set properties during initialization
         public Car(int year, string make, string model, string engineNoise, string honkNoise, bool isDriveable)
@@ -16,6 +17,7 @@ namespace CarLotSimulator3._1
             EngineNoise = engineNoise;
             HonkNoise = honkNoise;
             IsDriveable = isDriveable;
+            CarLot.numberOfCars++;
         }
 
         ////Car shall have the following properties: Year, Make, Model, EngineNoise, HonkNoise, IsDriveable
